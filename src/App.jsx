@@ -7,12 +7,13 @@ import {
 import Home from './view/Home';
 
 import Dashboard from './view/Dashboard';
+import UseState from './view/Dashboard/UseState';
 import UseCallback from './view/Dashboard/UseCallback';
 import UseMemo from './view/Dashboard/UseMemo';
 import ESModule from './view/Dashboard/ESModule';
 import Context from './view/Dashboard/Context';
 import Form from './view/Dashboard/Form';
-import Closure from './view/Dashboard/Closure';
+import HooksAndClosure from './view/Dashboard/HooksAndClosure';
 import Lazy from './view/Dashboard/Lazy';
 import Timer from './view/Dashboard/Timer';
 
@@ -40,12 +41,13 @@ const App = () => {
         <Route path="/home" element={<Home />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/useState" element={<UseState />} />
         <Route path="/dashboard/useCallback" element={<UseCallback />} />
         <Route path="/dashboard/useMemo" element={<UseMemo />} />
         <Route path="/dashboard/ESModule" element={<ESModule />} />
         <Route path="/dashboard/Context" element={<Context />} />
         <Route path="/dashboard/Form" element={<Form />} />
-        <Route path="/dashboard/Closure" element={<Closure />} />
+        <Route path="/dashboard/HooksAndClosure" element={<HooksAndClosure />} />
         <Route path="/dashboard/Lazy" element={<Lazy />} />
         <Route path="/dashboard/Timer" element={<Timer />} />
 
