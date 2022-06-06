@@ -22,6 +22,8 @@ const Dashboard = () => {
       <Link to="lazy">to Lazy</Link>
       <br />
       <Link to="timer">to Timer</Link>
+      <br />
+      <Link to="js">to JS</Link>
     </div>
   );
 }

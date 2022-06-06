@@ -16,6 +16,8 @@ import Form from './view/Dashboard/Form';
 import HooksAndClosure from './view/Dashboard/HooksAndClosure';
 import Lazy from './view/Dashboard/Lazy';
 import Timer from './view/Dashboard/Timer';
+import Js from './view/Dashboard/Js';
+import Write from './view/Dashboard/Js/Write';
 
 import Library from './view/Library';
 import './App.css';
@@ -50,6 +52,10 @@ const App = () => {
         <Route path="/dashboard/HooksAndClosure" element={<HooksAndClosure />} />
         <Route path="/dashboard/Lazy" element={<Lazy />} />
         <Route path="/dashboard/Timer" element={<Timer />} />
+        <Route path="/dashboard/Js" element={<Js />} />
+
+        <Route path="/dashboard/Js/Write" element={<Write />} />
+
 
         <Route path="/library" element={<Library />} />
       </Routes>
