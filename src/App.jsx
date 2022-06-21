@@ -12,7 +12,7 @@ import Hooks from './view/Hooks';
 import UseState from './view/Hooks/UseState';
 import UseCallback from './view/Hooks/UseCallback';
 import UseMemo from './view/Hooks/UseMemo';
-import HooksAndClosure from './view/Dashboard/HooksAndClosure';
+import HooksAndClosure from './view/Hooks/HooksAndClosure';
 import UseEvent from './view/Hooks/UseEvent';
 
 import ESModule from './view/Dashboard/ESModule';
@@ -51,7 +51,7 @@ const App = () => {
         <Route path="/hooks/useState" element={<UseState />} />
         <Route path="/hooks/useCallback" element={<UseCallback />} />
         <Route path="/hooks/useMemo" element={<UseMemo />} />
-        <Route path="/dashboard/HooksAndClosure" element={<HooksAndClosure />} />
+        <Route path="/hooks/HooksAndClosure" element={<HooksAndClosure />} />
         <Route path="/hooks/useEvent" element={<UseEvent />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
