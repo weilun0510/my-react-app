@@ -10,6 +10,7 @@ import Dashboard from './view/Dashboard';
 
 import Hooks from './view/Hooks';
 import UseState from './view/Hooks/UseState';
+import UseEffect from './view/Hooks/UseEffect';
 import UseCallback from './view/Hooks/UseCallback';
 import UseMemo from './view/Hooks/UseMemo';
 import HooksAndClosure from './view/Hooks/HooksAndClosure';
@@ -49,6 +50,7 @@ const App = () => {
 
         <Route path="/hooks" element={<Hooks />} />
         <Route path="/hooks/useState" element={<UseState />} />
+        <Route path="/hooks/useEffect" element={<UseEffect />} />
         <Route path="/hooks/useCallback" element={<UseCallback />} />
         <Route path="/hooks/useMemo" element={<UseMemo />} />
         <Route path="/hooks/HooksAndClosure" element={<HooksAndClosure />} />
