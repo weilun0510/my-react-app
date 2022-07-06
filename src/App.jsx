@@ -23,6 +23,7 @@ import Lazy from './view/Dashboard/Lazy';
 import Timer from './view/Dashboard/Timer';
 import Js from './view/Dashboard/Js';
 import Write from './view/Dashboard/Js/Write';
+import Drag from './view/Dashboard/Drag';
 
 import Library from './view/Library';
 import './App.css';
@@ -62,6 +63,7 @@ const App = () => {
         <Route path="/dashboard/Form" element={<Form />} />
         <Route path="/dashboard/Lazy" element={<Lazy />} />
         <Route path="/dashboard/Timer" element={<Timer />} />
+        <Route path="/dashboard/Drag" element={<Drag />} />
 
         <Route path="/dashboard/Js" element={<Js />} />
         <Route path="/dashboard/Js/Write" element={<Write />} />

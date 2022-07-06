@@ -18,6 +18,8 @@ const Dashboard = () => {
       <Link to="timer">to Timer</Link>
       <br />
       <Link to="js">to JS</Link>
+      <br />
+      <Link to="drag">to Drag</Link>
     </div>
   );
 }
