@@ -40,7 +40,7 @@ const CardReact = (props) => {
       setBtnText(--btnText)
     }, 1000)
     return () => {
-      clearInterval(timer.current)
+      timer.current && clearInterval(timer.current)
     }
   }, [])
 
