@@ -16,6 +16,8 @@ const Hooks = () => {
       <Link to="hooksAndClosure">to HooksAndClosure</Link>
       <br />
       <Link to="useEvent">to useEvent</Link>
+      <br />
+      <Link to="useLayoutEffect">to useLayoutEffect</Link>
     </div>
   );
 }

@@ -15,6 +15,8 @@ import UseCallback from './view/Hooks/UseCallback';
 import UseMemo from './view/Hooks/UseMemo';
 import HooksAndClosure from './view/Hooks/HooksAndClosure';
 import UseEvent from './view/Hooks/UseEvent';
+import UseLayoutEffect from './view/Hooks/UseLayoutEffect';
+
 
 import ESModule from './view/Dashboard/ESModule';
 import Context from './view/Dashboard/Context';
@@ -56,6 +58,7 @@ const App = () => {
         <Route path="/hooks/useMemo" element={<UseMemo />} />
         <Route path="/hooks/HooksAndClosure" element={<HooksAndClosure />} />
         <Route path="/hooks/useEvent" element={<UseEvent />} />
+        <Route path="/hooks/useLayoutEffect" element={<UseLayoutEffect />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/ESModule" element={<ESModule />} />
