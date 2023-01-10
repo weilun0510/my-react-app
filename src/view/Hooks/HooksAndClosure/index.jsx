@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Trap from './Trap';
 
 // hooks与闭包
 // 1. 状态是如何被保存的
@@ -34,6 +35,8 @@ const HooksAndClosure = () => {
     <div>
       <div>{count}</div>
       <button onClick={add}>add</button>
+
+      <Trap />
     </div>
   )
 }
