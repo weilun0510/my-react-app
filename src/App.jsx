@@ -12,6 +12,7 @@ import Hooks from './view/Hooks';
 import UseState from './view/Hooks/UseState';
 import UseEffect from './view/Hooks/UseEffect';
 import UseCallback from './view/Hooks/UseCallback';
+import UseContext from './view/Hooks/UseContext';
 import UseMemo from './view/Hooks/UseMemo';
 import HooksAndClosure from './view/Hooks/HooksAndClosure';
 import UseEvent from './view/Hooks/UseEvent';
@@ -28,6 +29,8 @@ import Write from './view/Dashboard/Js/Write';
 import Drag from './view/Dashboard/Drag';
 
 import Library from './view/Library';
+
+
 import './App.css';
 
 const App = () => {
@@ -39,7 +42,8 @@ const App = () => {
           <Link to="home">to home: 类组件</Link> <br />
           <Link to="dashboard">to dashboard: 函数组件</Link> <br />
           <Link to="library">to my library: 组件库</Link><br />
-          <Link to="hooks">to hooks: Hooks</Link>
+          <Link to="hooks">to hooks</Link>
+          {/* <Link to="hooks">to hooks: Test</Link> */}
         </nav>
       </div>
     );
@@ -55,6 +59,7 @@ const App = () => {
         <Route path="/hooks/useState" element={<UseState />} />
         <Route path="/hooks/useEffect" element={<UseEffect />} />
         <Route path="/hooks/useCallback" element={<UseCallback />} />
+        <Route path="/hooks/UseContext" element={<UseContext />} />
         <Route path="/hooks/useMemo" element={<UseMemo />} />
         <Route path="/hooks/HooksAndClosure" element={<HooksAndClosure />} />
         <Route path="/hooks/useEvent" element={<UseEvent />} />

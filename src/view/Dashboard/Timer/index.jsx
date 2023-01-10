@@ -47,6 +47,8 @@ const CardReact = (props) => {
   // 满足条件后清除定时器
   useEffect(() => {
     if (btnText < 1) {
+      // If we just wanted to set an interval, we wouldn’t need the ref (id could be local to the effect),
+      // but it’s useful if we want to clear the interval from an event handler:
       clearInterval(timer.current)
       setBtnText('抢购')
     }
