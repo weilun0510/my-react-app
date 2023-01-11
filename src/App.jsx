@@ -61,7 +61,7 @@ const App = () => {
         <Route path="/hooks/useCallback" element={<UseCallback />} />
         <Route path="/hooks/UseContext" element={<UseContext />} />
         <Route path="/hooks/useMemo" element={<UseMemo />} />
-        <Route path="/hooks/HooksAndClosure" element={<HooksAndClosure />} />
+        <Route path="/hooks/hooksAndClosure" element={<HooksAndClosure />} />
         <Route path="/hooks/useEvent" element={<UseEvent />} />
         <Route path="/hooks/useLayoutEffect" element={<UseLayoutEffect />} />
 

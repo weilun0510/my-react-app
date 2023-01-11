@@ -11,8 +11,6 @@ const Dashboard = () => {
       <br />
       <Link to="form">to Form</Link>
       <br />
-      <Link to="hooksAndClosure">to HooksAndClosure</Link>
-      <br />
       <Link to="lazy">to Lazy</Link>
       <br />
       <Link to="timer">to Timer</Link>

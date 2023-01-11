@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from "react";
 import { Button } from "../components";
 
+import myUseCallback from './ym';
+
 export default function UseCallback() {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -28,6 +30,11 @@ export default function UseCallback() {
     setCount4(count4 + 1);
   }, [])
 
+  const memoFn = myUseCallback(() => {
+    console.log('count1', count1)
+  }, [count1])
+
+
   return (
     <div>
       <h1>未使用useCallback</h1>
@@ -53,6 +60,9 @@ export default function UseCallback() {
       </Button>
       <div>count 只会更新一次</div>
       <div>count4: {count4}</div>
+
+      <h1>useCallback 实现</h1>
+      <button onClick={memoFn}>我依赖count1</button>
     </div>
   );
 }

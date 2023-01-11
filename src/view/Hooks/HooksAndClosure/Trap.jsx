@@ -1,7 +1,7 @@
 // 2. hooks 与 闭包陷阱
 // 参考: https://github.com/hacker0limbo/my-blog/issues/6
 const Trap = (props) => {
-  debugger
+  // debugger
   function createIncrement(i) {
     let value = 0;
     function increment() {
@@ -24,6 +24,15 @@ const Trap = (props) => {
 
   log();             // "Current value is 1"
 
+
+  debugger
+  for ( var i=0; i<5; i++ ) {
+    (function a(i){
+          setTimeout(()=>{
+             console.log(i)
+         }, 0)
+    })(i)
+ }
 
   return <div>闭包陷阱</div>
 }
