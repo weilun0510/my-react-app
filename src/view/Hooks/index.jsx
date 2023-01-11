@@ -20,6 +20,8 @@ const Hooks = () => {
       <Link to="useLayoutEffect">to useLayoutEffect</Link>
       <br />
       <Link to="useContext">to useContext</Link>
+      <br />
+      <Link to="closureTrap">to ClosureTrap</Link>
     </div>
   );
 }

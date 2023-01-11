@@ -1,4 +1,4 @@
-// 2. hooks 与 闭包陷阱
+// 闭包陷阱
 // 参考: https://github.com/hacker0limbo/my-blog/issues/6
 const Trap = (props) => {
   // debugger
@@ -25,16 +25,35 @@ const Trap = (props) => {
   log();             // "Current value is 1"
 
 
-  // debugger
-  for ( var i=0; i<5; i++ ) {
-    (function a(i){
-          setTimeout(()=>{
-             console.log(i)
-         }, 0)
-    })(i)
- }
 
-  return <div>闭包陷阱</div>
+  // 如果想要访问最新值，把message变量从基础数据类型改为引用类型
+  // function createIncrement(i) {
+  //   let value = {
+  //     a: 0
+  //   };
+  //   function increment() {
+  //     value.a += i;
+  //     const message = value;
+
+  //     return function logValue() {
+  //       console.log('value: ', value);
+  //       console.log('message: ', message);
+  //     };
+  //   }
+
+  //   return increment;
+  // }
+
+  // const inc = createIncrement(1);
+  // const log = inc(); // 1
+  // inc();             // 2
+  // inc();             // 3
+
+  // log();             // "Current value is 1"
+
+  return <>
+    <div>闭包陷阱</div>
+  </>
 }
 
 export default Trap
