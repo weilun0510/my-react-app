@@ -25,7 +25,7 @@ const Trap = (props) => {
   log();             // "Current value is 1"
 
 
-  debugger
+  // debugger
   for ( var i=0; i<5; i++ ) {
     (function a(i){
           setTimeout(()=>{

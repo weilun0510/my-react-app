@@ -1,21 +1,10 @@
-import { useState } from 'react';
-import Trap from './Trap';
-
 // hooks与闭包
-// 1. 状态是如何被保存的
 const HooksAndClosure = () => {
-  const [count, setCount] = useState(0)
 
-  const add = () => {
-    debugger
-    setCount(prev => prev + 1)
-  }
-
-  // 验证：调用setCounter时闭包产生了
-  // TODO debugger
+  // 验证：myUseState执行时闭包产生了
   const StateModule = (function SM() {
     let state = null
-    return function useState(value) {
+    return function myUseState(value) {
       state = state || value	// 第一次调用没有初始值，因此使用传入的初始值赋值
 
       function dispatch(newValue) {
@@ -27,17 +16,24 @@ const HooksAndClosure = () => {
       return [state, dispatch]
     }
   })()
-  const useState2 = StateModule
-  const [counter, setCounter] = useState2(0)
-  setCounter(1)
+
+  const myUseState = StateModule
+  debugger
+  const [counter, setCounter] = myUseState(0)
+
+
+  const addCounter = () => {
+    // 调用setCounter时也会产生闭包
+    debugger
+    setCounter(counter + 1)
+  }
 
   return (
-    <div>
-      <div>{count}</div>
-      <button onClick={add}>add</button>
+    <>
+      <h1>状态是如何被保存的</h1>
 
-      <Trap />
-    </div>
+      <button onClick={addCounter}>add Counter</button>
+    </>
   )
 }
 export default HooksAndClosure
