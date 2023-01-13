@@ -1,5 +1,6 @@
 // 闭包陷阱
 // 参考: https://github.com/hacker0limbo/my-blog/issues/6
+import HookClosureTrap from './HookClosureTrap';
 const Trap = (props) => {
   // debugger
   function createIncrement(i) {
@@ -53,6 +54,8 @@ const Trap = (props) => {
 
   return <>
     <div>闭包陷阱</div>
+
+    <HookClosureTrap />
   </>
 }
 
