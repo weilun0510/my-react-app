@@ -11,6 +11,7 @@ const Trap = (props) => {
       const message = `Current value is ${value}`;
       return function logValue() {
         console.log('value: ', value);
+        // debugger
         console.log(message);
       };
     }
@@ -27,18 +28,73 @@ const Trap = (props) => {
 
 
 
-  // 如果想要访问最新值，把message变量从基础数据类型改为引用类型
+  // 如果想要访问最新值，把value 改为引用类型赋值给 message
   // function createIncrement(i) {
   //   let value = {
   //     a: 0
-  //   };
+  //   }
   //   function increment() {
   //     value.a += i;
-  //     const message = value;
+  //     const message = value
 
   //     return function logValue() {
-  //       console.log('value: ', value);
-  //       console.log('message: ', message);
+  //       console.log('value: ', value);  // { a: 3 }
+  //       console.log('message: ', message); // { a: 3 }
+  //     };
+  //   }
+
+  //   return increment;
+  // }
+
+  // function createIncrement(i) {
+  //   let value = {
+  //     a: 0
+  //   }
+  //   function increment() {
+  //     value.a += i;
+  //     const message = `Current value is ${value.a}`
+
+  //     return function logValue() {
+  //       console.log('value: ', value); // { a: 3 }
+  //       console.log('message: ', message);  // Current value is 1
+  //     };
+  //   }
+
+  //   return increment;
+  // }
+
+  // function createIncrement(i) {
+  //   let value = {
+  //     a: 0
+  //   }
+  //   function increment() {
+  //     value.a += i;
+  //     const message = {
+  //       a: value.a
+  //     }
+
+  //     return function logValue() {
+  //       console.log('value: ', value); // { a: 3 }
+  //       console.log('message: ', message);  // { a: 1 }
+  //     };
+  //   }
+
+  //   return increment;
+  // }
+
+  // function createIncrement(i) {
+  //   let value = {
+  //     a: 0
+  //   }
+  //   function increment() {
+  //     value.a += i;
+  //     const message = {
+  //       a: value
+  //     }
+
+  //     return function logValue() {
+  //       console.log('value: ', value); // { a: 3 }
+  //       console.log('message: ', message);  // { a: { a: 3 } }
   //     };
   //   }
 
@@ -50,7 +106,7 @@ const Trap = (props) => {
   // inc();             // 2
   // inc();             // 3
 
-  // log();             // "Current value is 1"
+  // log();             // message: { a: 3 }
 
   return <>
     <div>闭包陷阱</div>
